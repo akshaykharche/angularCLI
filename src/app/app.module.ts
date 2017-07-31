@@ -1,20 +1,22 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { BrowserModule  } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { EagerComponent } from './eager.component';
+import { routing } from './app.routing';
+import { LazyComponent } from './lazy.component';
+
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+    routing
   ],
-  providers: [],
+  declarations: [
+    AppComponent,
+    EagerComponent,
+    LazyComponent
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
